@@ -4,8 +4,6 @@ $button.addEventListener("click", async () => {
   const media = await navigator.mediaDevices.getDisplayMedia({
     video: { frameRate: { ideal: 30 } },
     audio: true,
-    controls: true,
-    systemAudio: true,
   });
   const mediarecorder = new MediaRecorder(media, {
     mimeType: "video/webm;codecs=vp8,opus",
